@@ -81,3 +81,103 @@ let questions = [
         correct : "C"
     }
 ];
+
+
+function hideShow(){
+    var val;
+    var a=document.getElementById("submit");
+    var b=document.getElementById("next");
+    var c= document.getElementById("alert");
+    var d=document.getElementById("alert-in");
+    const choiceA = document.getElementById("o1");
+    const choiceB = document.getElementById("o2");
+    const choiceC = document.getElementById("o3");
+    const choiceD = document.getElementById("o4");
+
+
+     if(choiceA.checked){
+     val=choiceA.value;
+     
+     }
+     if(choiceB.checked){
+     val=choiceB.value;
+    
+     }
+     if(choiceC.checked){
+     val=choiceC.value;
+    
+     }
+     if(choiceD.checked){
+     val=choiceD.value;
+     }
+     if(val==undefined)
+     alert('Please select an option');
+
+        
+                  
+        else if(val==questions[i-1].correct){
+             c.removeAttribute("hidden");
+             b.removeAttribute("hidden");
+             a.setAttribute("hidden", true);
+             choiceA.setAttribute("disabled",true);
+             choiceB.setAttribute("disabled",true);
+             choiceC.setAttribute("disabled",true);
+             choiceD.setAttribute("disabled",true);
+             j++;
+                   
+                   }
+            else{
+                   d.removeAttribute("hidden");
+                   b.removeAttribute("hidden");
+                   a.setAttribute("hidden", true);
+                   choiceA.setAttribute("disabled",true);
+                   choiceB.setAttribute("disabled",true);
+                   choiceC.setAttribute("disabled",true);
+                   choiceD.setAttribute("disabled",true);
+                    }   
+    }
+
+
+document.getElementById("qtn").style.visibility="hidden";
+
+function next(){
+
+    var a=document.getElementById("submit");
+    var b=document.getElementById("next");
+    var c= document.getElementById("alert");
+    var d=document.getElementById("alert-in");
+    const choiceA = document.getElementById("o1");
+    const choiceB = document.getElementById("o2");
+    const choiceC = document.getElementById("o3");
+    const choiceD = document.getElementById("o4");
+    
+     if(i<10)
+     {document.getElementById("q").innerHTML=questions[i].question;
+     document.getElementById("opt1").innerHTML=questions[i].choiceA;
+     document.getElementById("opt2").innerHTML=questions[i].choiceB;
+     document.getElementById("opt3").innerHTML=questions[i].choiceC;
+     document.getElementById("opt4").innerHTML=questions[i].choiceD;
+    
+
+     a.removeAttribute("hidden");   
+     b.setAttribute("hidden",true);
+     c.setAttribute("hidden",true);
+     d.setAttribute("hidden",true);
+     choiceA.checked=false;
+     choiceB.checked=false; 
+     choiceC.checked=false;
+     choiceD.checked=false;
+
+     choiceA.removeAttribute("disabled",true);  
+     choiceB.removeAttribute("disabled",true);
+     choiceC.removeAttribute("disabled",true);
+     choiceD.removeAttribute("disabled",true);
+     i++;
+
+     }
+     else{
+        document.getElementById("score").innerHTML="Score-:"+j;
+        document.getElementById("qtn").setAttribute("hidden",true);
+        document.getElementById("ans").style.visibility="visible";
+        }
+ }
