@@ -74,4 +74,80 @@
 
 <br>
 </body>
+</html><html>
+    <head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div  id="qtn"  >
+    <div class="container-fluid" >
+        <div class="row" id="heading">  
+            <div class="col-12" style="text-align:center;">       
+        <center><h1 style="color:white; ">Quiz</h1></center><br>         
+        </div></div>
+
+<div class="row" style="padding:30px;" >
+<div class="container-fluid" > 
+ <div class="col-12" id="ques">
+        <h3 id="q">A complete graph can have?</h3>
+        <input id="o1" type="radio" name="choice" value="A"><span id="opt1" >multiple loops </span><br>
+           <input id="o2" type="radio" name="choice" value="B" ><span id="opt2"> 2 spanning trees</span><br>
+              <input id="o3" type="radio" name="choice" value="C"><span id="opt3"> disconnected vertices</span><br>
+                 <input id="o4" type="radio" name="choice" value="D"><span id="opt4"> no Edge</span><br><br>
+                <strong><p class="alert alert-success" style="width:fit-content;" id="alert" hidden>correct</p></strong>
+                <strong><p class="alert alert-danger" style="width:fit-content;" id="alert-in" hidden>incorrect</p></strong>
+                 <button class="btn btn-warning" id="submit" onclick="hideShow()">Submit</button>
+                 <button class="btn btn-success" id="next" onclick="next()" hidden>Next</button>
+ </div>
+</div>
+</div>     
+</div>
+</div>
+
+
+
+<!--answer key-->
+<div id="ans" style="visibility:hidden">
+    <div class="container-fluid" >
+    <div class="row" id="heading">  
+        <div class="col-12" style="text-align:center;">       
+        <center><h1 style="color:white; " id="score">Score:</h1></center><br>         
+        </div></div>
+
+<div class="row" style="padding:30px;" >
+    <h1 style="padding:5px;">Answer Key</h1>
+<div class="container-fluid" > 
+ <div class="col-12" id="ques">
+        <ul>
+        <li> A complete graph can have<span class="badge badge-success">2 spanning trees</span></li><br>
+        <li> Which type of javascript language is_____<span class="badge badge-success">Object-based</span></li><br>
+        <li> Which one of the following also known as Conditional Expression<span class="badge badge-success">immediate if</span></li><br>
+        <li>In JS, what is a block of statement?<span class="badge badge-success">combines a number of statements into single compound statement</span></li><br>
+        <li> When happens when an interpreter encounters an empty statement-<span class="badge badge-success">Ignores the statement</span></li><br>
+        <li> The 'function' and 'var' are known as- <span class="badge badge-success">Declaration statements</span></li><br>
+        <li> Which of the following variables takes precedence over the others if  the names are the same-<span class="badge badge-success">The local element</span></li><br>
+        <li> Which one of the following is the correct way for calling the js code-<span class="badge badge-success">Function/Method</span></li><br>
+        <li> Which of the following type of variable is volatile-<span class="badge badge-success">Volatile variable</span></li><br>
+        <li> When there is an indefinate or an infinite value during an arithmetic computation in a program, then JavaScript prints______.<span class="badge badge-success">Displays 'Infinity'</span></li><br>
+        </ul>
+
+
+ </div>
+</div>
+<br>
+<button type="button" class="btn btn-info" style="margin:15px;" id="rest" onclick="window.location.href=window.location.href">Restart</button>
+</div> 
+
+
+</div>
+</div>
+
+<br>
+</body>
 </html>
